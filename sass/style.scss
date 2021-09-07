@@ -1,0 +1,279 @@
+$color-primaire:#9356DC;
+$color-secondaire:#FF79DA;
+$color-tertiaire:#99E2D0;
+$color-header:#c2c2c2;
+$color-background-fonctionnement: white;
+$color-background-decouvrir: rgb(238, 229, 229);
+$color-icon:rgb(121, 120, 120);
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+
+$font-logo-tilte:'Shrikhand', cursive;
+$font-body:'Roboto', sans-serif;
+
+body{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header-logo{
+    font-family: $font-logo-tilte;
+    width: 165px;
+    height: 30px;
+    padding: 15px;
+}
+
+p, div, a, li, h2, h3, h4, h5, h6{
+    font-family: $font-body;
+} 
+h2{
+    font-size: 1.4rem;
+}
+
+.header{
+    text-align: center;
+    .header__maps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -moz-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
+    background: -webkit-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
+    background: linear-gradient(to bottom, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
+    height: 50px;
+    margin: 0;
+    }
+    .header__maps--icon{
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .header__maps--text{
+        font-weight: bold;
+    }
+}
+
+
+.decouvrir{
+    text-align: center;
+    padding:2rem;
+    background-color:#F6F6F6;
+    height: 250px;
+    .decouvrir__title{
+        font-weight: bold;
+        color: black;
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    .decouvrir__subtitle{
+        font-size: 1,9rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .decouvrir__btn{
+       width: 200px;
+       height: 50px;
+       border-radius: 50px;
+       cursor: pointer;
+       background: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
+       border:none;
+       position: relative;
+       transition: 300ms;
+       box-shadow: 0px 11px 10px -5px $color-header;
+   
+       &:hover {
+           transform: scale(1.15);
+           box-shadow:0px 11px 10px -5px$color-primaire ,0px 11px 10px -5px $color-secondaire;
+        } 
+    }
+    .decouvrir__btn--text{
+        color: #f5f5f5;
+        font-size: 1.1em;       
+    }
+}
+@mixin margin-h2{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 3px 15px -4px $color-header;
+}
+
+@mixin fonctionement-filtres {
+    border:2px transparent #C2C2C2;
+    max-height: 100px;
+    border-radius: 30px;
+    margin-right: 20px;
+    display: flex;
+    background-color:rgb(250, 250, 250);
+    align-items: center;
+    cursor: pointer;
+    min-width: 330px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    height: 70px; 
+    box-shadow: 0px -3px 31px -14px $color-header;
+}
+
+@mixin fonctionnement-numero-list {
+    margin-left:-12px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color:$color-primaire ;
+      color: white;
+      font-weight: bold;
+      padding-top: 2px;
+      text-align: center;
+      border: 1px solid $color-primaire;    
+      margin-right: 30px; 
+}
+@mixin fonctionnement-icon {
+    color:$color-icon;
+    margin-right: 50px;
+    
+}
+
+
+.fonctionnement{
+    width: 100%;
+    justify-content: center;
+    
+    .fonctionnement__titlte{
+    @include margin-h2;
+    padding-bottom: 15px
+}
+.fonctionnement__filtres{
+    @include fonctionement-filtres;
+    @include box-shadow;
+}
+.fonctionnement__numero-list{
+    @include fonctionnement-numero-list; 
+}
+.fa{
+    @include fonctionnement-icon;
+    
+}
+.fonctionnement__text-list{
+    font-weight: bold;
+
+}
+.fonctionnement__filtres:hover{
+    background-color: #e7d8fa;
+    box-shadow:0px -3px 31px -14px $color-header, 0px 3px 15px -4px $color-header;
+   
+}
+.fonctionnement__filtres:hover >.fa{
+    color:$color-primaire;
+}
+}
+
+.restaurant{
+    min-height: 1220px;
+    margin: auto;
+    
+}
+.restaurant__bloc{
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color:#F6F6F6;
+}   
+
+.restaurant__bloc{
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.restaurant__bloc--cadre{
+    min-width: 300px;
+    height: 270px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px; 
+}
+.restaurant__bloc--cadre--imgtag{
+    position: relative;
+    text-align: center;
+}
+    .restaurant__bloc--cadre--imgtag--img{
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+.restaurant__bloc--cadre--imgtag--tag{
+    color: #217460;
+    background-color: #99e2d0;
+    padding:8px 16px 8px 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50px;
+    font-weight: bold;
+    font-size: small; 
+    position: absolute;
+    top: 12px;
+    right: 10px;
+
+}
+.restaurant__bloc--cadre--text{
+    position: relative;
+    line-height: 30%;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    
+.restaurant__bloc--cadre--text--icon{
+    position: absolute;
+    right: 15px;
+    bottom: 30px;
+    cursor: pointer;
+}
+.restaurant__bloc--cadre--text--icon--nobg{
+        cursor: pointer;
+        color: #9356DC;
+        background-color: white;
+    }
+.restaurant__bloc--cadre--text--icon--bg{
+        cursor: pointer;
+        color: #9356DC;
+        background-color: white;
+         
+}
+}
+.footer-accueil{
+    max-width: 100%;
+    background: rgb(44, 43, 43);
+    max-height: 200px;
+    color: white;
+    padding: 30px 25px 30px 30px;
+        .footer-accueil__logo{
+        height: 20px;
+        width: 100px;
+        padding-bottom: 10px;
+    }
+    .footer-accueil__icon{
+        padding-right: 10px;  
+    }
+.footer-accueil__text{
+        display: flex;
+        flex-direction: column;
+        line-height: 25px;
+    }
+a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+a:hover{
+    color: $color-primaire;
+}
+}
