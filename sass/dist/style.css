@@ -1,31 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   width: auto;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.header-logo {
-  font-family: "Shrikhand", cursive;
-  width: 165px;
-  height: 30px;
-  padding: 15px;
-}
-
-p, div, a, li, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
-  font-size: 1.4rem;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0 15px 0;
+}
+.header .header__logo {
+  font-family: "Shrikhand", cursive;
+  width: 165px;
+  height: 30px;
 }
 
-.header {
-  text-align: center;
-}
-.header .header__maps {
+.maps {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,12 +34,9 @@ h2 {
   height: 50px;
   margin: 0;
 }
-.header .header__maps--icon {
+.maps .maps__icon {
   margin-right: 20px;
   cursor: pointer;
-}
-.header .header__maps--text {
-  font-weight: bold;
 }
 
 .decouvrir {
@@ -51,7 +47,6 @@ h2 {
 }
 .decouvrir .decouvrir__title {
   font-weight: bold;
-  color: black;
   font-size: 1.5em;
   margin-top: 20px;
 }
@@ -83,6 +78,7 @@ h2 {
 .fonctionnement {
   width: 100%;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .fonctionnement .fonctionnement__titlte {
   margin-left: 20px;
@@ -142,11 +138,12 @@ h2 {
   padding-right: 30px;
   padding-left: 30px;
   background-color: #F6F6F6;
-}
-
-.restaurant__bloc {
   justify-content: center;
   padding-bottom: 30px;
+}
+
+.restaurant__bloc--title {
+  padding-top: 40px;
 }
 
 .restaurant__bloc--cadre {
@@ -159,6 +156,11 @@ h2 {
   justify-content: center;
   cursor: pointer;
   margin-top: 30px;
+}
+
+.restaurant__bloc--cadre--lien {
+  text-decoration: none;
+  color: black;
 }
 
 .restaurant__bloc--cadre--imgtag {
@@ -195,18 +197,21 @@ h2 {
   padding-left: 15px;
   padding-bottom: 10px;
 }
-.restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon {
+
+.restaurant__bloc--cadre--text--icon {
   position: absolute;
   right: 15px;
   bottom: 30px;
   cursor: pointer;
 }
-.restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon--nobg {
+
+.restaurant__bloc--cadre--text--icon--nobg {
   cursor: pointer;
   color: #9356DC;
   background-color: white;
 }
-.restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon--bg {
+
+.restaurant__bloc--cadre--text--icon--bg {
   cursor: pointer;
   color: #9356DC;
   background-color: white;
@@ -239,4 +244,127 @@ h2 {
 }
 .footer-accueil a:hover {
   color: #9356DC;
+}
+
+.header__icon-back {
+  position: absolute;
+  width: 100%;
+  left: 20px;
+}
+
+.header-icon {
+  color: black;
+}
+
+.main {
+  width: 100%;
+  height: 1450px;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.cart-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.cart-menu {
+  width: 100%;
+  height: 280px;
+  background: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+  bottom: 0px;
+  top: 248px;
+}
+
+.carte-menu-bloc-title {
+  padding-left: 20px;
+  padding-top: 10px;
+  position: relative;
+  font-style: italic;
+}
+
+.carte-title {
+  font-family: "Shrikhand", cursive;
+}
+
+.carte-menu-bloc-tilte-icon {
+  position: relative;
+}
+
+.cart-menu-bloc-icon {
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+}
+
+.cart-iconbg {
+  color: #9356DC;
+}
+
+.carte-menu {
+  height: 300px;
+}
+
+.carte-menu-title {
+  width: 40px;
+  height: 30px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-bottom: 4px solid #99E2D0;
+}
+
+.carte-menu-cadre {
+  width: 80%;
+  min-height: 60px;
+  background-color: white;
+  border-radius: 20px;
+  line-height: 0;
+  padding-top: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
+}
+
+.carte-menu-cadre-tilte {
+  font-weight: bold;
+}
+
+.carte-menu-cadre-descri {
+  font-size: 0.9em;
+}
+
+.carte-menu-cadre-price {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+}
+
+.cart-menu-bloc {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-menu-bloc-btn {
+  color: white;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 50px;
+  transition: 300ms;
+  box-shadow: 0px 11px 10px -5px #c2c2c2;
+}
+.cart-menu-bloc-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 11px 10px -5px #9356DC, 0px 11px 10px -5px #FF79DA;
 }

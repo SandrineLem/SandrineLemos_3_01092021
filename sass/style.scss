@@ -12,30 +12,32 @@ $color-icon:rgb(121, 120, 120);
 $font-logo-tilte:'Shrikhand', cursive;
 $font-body:'Roboto', sans-serif;
 
+h1,h2{
+    font-family: $font-body;
+}
+
 body{
     width: auto;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-
-.header-logo{
-    font-family: $font-logo-tilte;
-    width: 165px;
-    height: 30px;
-    padding: 15px;
-}
-
-p, div, a, li, h2, h3, h4, h5, h6{
     font-family: $font-body;
-} 
-h2{
-    font-size: 1.4rem;
 }
+
 
 .header{
-    text-align: center;
-    .header__maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px 0 15px 0;
+    .header__logo{
+    font-family: $font-logo-tilte;
+    width: 165px;
+    height: 30px;    
+    }
+}
+
+.maps{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,13 +46,9 @@ h2{
     background: linear-gradient(to bottom, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
     height: 50px;
     margin: 0;
-    }
-    .header__maps--icon{
+    .maps__icon{
         margin-right: 20px;
         cursor: pointer;
-    }
-    .header__maps--text{
-        font-weight: bold;
     }
 }
 
@@ -62,7 +60,6 @@ h2{
     height: 250px;
     .decouvrir__title{
         font-weight: bold;
-        color: black;
         font-size: 1.5em;
         margin-top: 20px;
     }
@@ -140,6 +137,7 @@ h2{
 .fonctionnement{
     width: 100%;
     justify-content: center;
+    padding-bottom: 20px;
     
     .fonctionnement__titlte{
     @include margin-h2;
@@ -173,19 +171,17 @@ h2{
 .restaurant{
     min-height: 1220px;
     margin: auto;
-    
 }
 .restaurant__bloc{
     padding-right: 30px;
     padding-left: 30px;
     background-color:#F6F6F6;
-}   
-
-.restaurant__bloc{
     justify-content: center;
     padding-bottom: 30px;
 }
-
+.restaurant__bloc--title{
+    padding-top: 40px;
+}
 .restaurant__bloc--cadre{
     min-width: 300px;
     height: 270px;
@@ -195,20 +191,23 @@ h2{
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    margin-top: 30px; 
+    margin-top: 30px;
+}
+.restaurant__bloc--cadre--lien{
+    text-decoration: none;
+    color: black;
 }
 .restaurant__bloc--cadre--imgtag{
     position: relative;
     text-align: center;
 }
-    .restaurant__bloc--cadre--imgtag--img{
+.restaurant__bloc--cadre--imgtag--img{
     background-size: cover;
     background-position: center;
     border-radius: 15px 15px 0 0;
     width: 100%;
     height: 200px;
     object-fit: cover;
-    
 }
 .restaurant__bloc--cadre--imgtag--tag{
     color: #217460;
@@ -222,14 +221,13 @@ h2{
     position: absolute;
     top: 12px;
     right: 10px;
-
 }
 .restaurant__bloc--cadre--text{
     position: relative;
     line-height: 30%;
     padding-left: 15px;
     padding-bottom: 10px;
-    
+}
 .restaurant__bloc--cadre--text--icon{
     position: absolute;
     right: 15px;
@@ -237,17 +235,24 @@ h2{
     cursor: pointer;
 }
 .restaurant__bloc--cadre--text--icon--nobg{
-        cursor: pointer;
-        color: #9356DC;
-        background-color: white;
-    }
+    cursor: pointer;
+    color: #9356DC;
+    background-color: white;
+}   
 .restaurant__bloc--cadre--text--icon--bg{
-        cursor: pointer;
-        color: #9356DC;
-        background-color: white;
-         
-}
-}
+    cursor: pointer;
+    color: #9356DC;
+    background-color: white; 
+}    
+
+
+
+
+
+
+    
+
+
 .footer-accueil{
     max-width: 100%;
     background: rgb(44, 43, 43);
@@ -276,4 +281,121 @@ a{
 a:hover{
     color: $color-primaire;
 }
+}
+
+.header__icon-back{
+    position: absolute;
+    width: 100%;
+    left: 20px;
+    
+}
+.header-icon{
+    color: black;
+}
+
+.main{
+    width: 100%;
+    height: 1450px;
+    background: #f6f6f6;
+    position: relative;
+}
+
+.cart-img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    
+}    
+.cart-menu{
+    width: 100%;
+    height: 280px;
+    background: #f6f6f6;
+    border-radius: 35px 35px 0 0;
+    position: absolute;
+    bottom: 0px;
+    top:248px;
+    
+}
+
+.carte-menu-bloc-title{
+    padding-left: 20px;
+    padding-top: 10px;
+    position: relative;
+    font-style: italic; 
+}
+.carte-title{
+    font-family: $font-logo-tilte;
+}
+.carte-menu-bloc-tilte-icon{
+    position: relative;
+}
+
+.cart-menu-bloc-icon{
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+}
+
+.cart-iconbg{
+    color: $color-primaire;
+}
+.carte-menu{
+    height: 300px;
+}
+.carte-menu-title{
+    width: 40px;
+    height: 30px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-bottom: 4px solid $color-tertiaire;
+}
+.carte-menu-cadre{
+    width: 80%;
+    min-height: 60px;
+    background-color: white;
+    border-radius: 20px;
+    line-height: 0;
+    padding-top: 5px;
+    margin-left: 20px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    box-shadow:0px -3px 31px -14px $color-header, 0px 3px 15px -4px $color-header;
+}
+.carte-menu-cadre-tilte{
+    font-weight: bold;  
+}
+.carte-menu-cadre-descri{
+   
+    font-size: 0.9em;
+}
+.carte-menu-cadre-price{
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
+.cart-menu-bloc{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cart-menu-bloc-btn{
+    color: white;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right,$color-secondaire,$color-primaire);
+    border: none;
+    border-radius: 50px;
+    transition: 300ms;
+    box-shadow: 0px 11px 10px -5px $color-header;
+   
+       &:hover {
+           transform: scale(1.15);
+           box-shadow:0px 11px 10px -5px$color-primaire ,0px 11px 10px -5px $color-secondaire;
+        } 
 }
