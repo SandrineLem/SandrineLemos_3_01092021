@@ -347,14 +347,14 @@ body, html {
 .restaurant__bloc--cadre--text--icon {
   position: absolute;
   right: 70px;
-  bottom: 50px;
+  bottom: 60px;
   cursor: pointer;
 }
 
 .restaurant__bloc--cadre--text--icon--nobg {
   position: absolute;
   cursor: pointer;
-  background-color: white;
+  background-color: transparent;
 }
 
 .restaurant__bloc--cadre--text--icon--bg {
