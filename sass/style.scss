@@ -452,7 +452,26 @@ a:hover{
            box-shadow:0px 11px 10px -5px$color-primaire ,0px 11px 10px -5px $color-secondaire;
         } 
 }
-
+.restaurant__bloc--cadre--text--iconmenu{
+    position: absolute;
+    right: 70px;
+    bottom: 30px;
+    cursor: pointer;
+}
+.restaurant__bloc--cadre--text--iconmenu--nobg{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+}   
+.restaurant__bloc--cadre--text--iconmenu--bg{
+    position: absolute;
+    cursor: pointer;
+    background: linear-gradient(to top right, $color-secondaire, $color-primaire);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.5s;
+    transform: scale(0); 
+}    
 
 
 
