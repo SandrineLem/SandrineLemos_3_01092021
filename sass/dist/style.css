@@ -252,21 +252,29 @@ body, html {
 
 .restaurant__bloc--cadre--text--icon {
   position: absolute;
-  right: 15px;
-  bottom: 30px;
+  right: 70px;
+  bottom: 50px;
   cursor: pointer;
 }
 
 .restaurant__bloc--cadre--text--icon--nobg {
+  position: absolute;
   cursor: pointer;
-  color: #9356DC;
   background-color: white;
 }
 
 .restaurant__bloc--cadre--text--icon--bg {
+  position: absolute;
   cursor: pointer;
-  color: #9356DC;
-  background-color: white;
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.restaurant__bloc--cadre--text--icon:hover .restaurant__bloc--cadre--text--icon--bg {
+  transform: scale(1);
 }
 
 .footer-accueil {
