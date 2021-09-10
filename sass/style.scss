@@ -492,9 +492,12 @@ a:hover{
     background: linear-gradient(to top right, $color-secondaire, $color-primaire);
     color: transparent;
     -webkit-background-clip: text;
-    transition: 0.5s;
+    -moz-background-clip: text;
+    transition: 0.6s;
     transform: scale(0); 
 }    
-
+.restaurant__bloc--cadre--text--iconmenu:hover .restaurant__bloc--cadre--text--iconmenu--bg{
+    transform: scale(1);
+}
 
 
