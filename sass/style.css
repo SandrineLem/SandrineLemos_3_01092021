@@ -7,8 +7,6 @@ h1, h2 {
 body, html {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
 }
@@ -398,9 +396,8 @@ body, html {
 }
 
 .footer-accueil {
-  max-width: 100%;
+  max-height: 150px;
   background: #2c2b2b;
-  max-height: 200px;
   color: white;
   padding: 30px 25px 30px 30px;
 }
@@ -423,6 +420,11 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   line-height: 25px;
 }
 
@@ -448,7 +450,7 @@ body, html {
 
 .main {
   width: 100%;
-  height: 1450px;
+  height: 1500px;
   background: #f6f6f6;
   position: relative;
 }
@@ -461,13 +463,25 @@ body, html {
 }
 
 .cart-menu {
-  width: 100%;
-  height: 280px;
+  min-width: 400px;
+  height: 1200px;
   background: #f6f6f6;
   border-radius: 35px 35px 0 0;
   position: absolute;
   bottom: 0px;
   top: 248px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .carte-menu-bloc-title {
@@ -496,31 +510,45 @@ body, html {
 }
 
 .carte-menu {
-  height: 300px;
+  min-height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding-left: 5px;
 }
 
 .carte-menu-title {
   width: 40px;
   height: 30px;
-  margin-left: 20px;
   margin-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 4px solid #99E2D0;
 }
 
 .carte-menu-cadre {
-  width: 80%;
+  width: 380px;
   min-height: 60px;
   background-color: white;
   border-radius: 20px;
   line-height: 0;
-  padding-top: 5px;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 20px;
   position: relative;
+  padding-left: 10px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
           box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
+}
+
+.carte-menu-cadre-text {
+  width: 320px;
+  height: auto;
 }
 
 .carte-menu-cadre-tilte {
@@ -538,11 +566,16 @@ body, html {
 }
 
 .cart-menu-bloc {
-  width: 100%;
   height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -576,7 +609,7 @@ body, html {
 .restaurant__bloc--cadre--text--iconmenu {
   position: absolute;
   right: 70px;
-  bottom: 30px;
+  bottom: 55px;
   cursor: pointer;
 }
 
