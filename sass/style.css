@@ -557,6 +557,7 @@ body, html {
   position: relative;
   padding-left: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
   -webkit-box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
           box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
 }
@@ -667,5 +668,64 @@ body, html {
       align-content: flex-start;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.carte-menu-cadre-animation-gb {
+  background-color: #99E2D0;
+  min-height: 65px;
+  width: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 86%;
+  z-index: 10;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 800ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: -webkit-transform 800ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 800ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 800ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 800ms cubic-bezier(0.32, 0, 0.07, 1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.carte-menu-icon {
+  color: white;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-animation-gb {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.carte-menu-cadre:hover .carte-menu-icon {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.carte-menu-cadre-price {
+  -webkit-transition: -webkit-transform 700ms;
+  transition: -webkit-transform 700ms;
+  transition: transform 700ms;
+  transition: transform 700ms, -webkit-transform 700ms;
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-price {
+  -webkit-transform: translate(-50px, 0);
+          transform: translate(-50px, 0);
 }
 /*# sourceMappingURL=style.css.map */

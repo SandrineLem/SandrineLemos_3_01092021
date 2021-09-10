@@ -416,6 +416,7 @@ body, html {
   position: relative;
   padding-left: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
   box-shadow: 0px -3px 31px -14px #c2c2c2, 0px 3px 15px -4px #c2c2c2;
 }
 
@@ -498,4 +499,44 @@ body, html {
   align-content: flex-start;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.carte-menu-cadre-animation-gb {
+  background-color: #99E2D0;
+  min-height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 86%;
+  z-index: 10;
+  transform: scaleX(0);
+  transition: transform 800ms cubic-bezier(0.32, 0, 0.07, 1);
+  transform-origin: right;
+}
+
+.carte-menu-icon {
+  color: white;
+  transform: rotate(90deg);
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-animation-gb {
+  transform: scaleX(1);
+}
+
+.carte-menu-cadre:hover .carte-menu-icon {
+  transform: rotate(360deg);
+  transition: 700ms;
+}
+
+.carte-menu-cadre-price {
+  transition: transform 700ms;
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-price {
+  transform: translate(-50px, 0);
 }
