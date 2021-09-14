@@ -24,7 +24,8 @@ body,html{
 }
 .bloc_plage{
     margin: 0;
-    padding: 0;
+    padding-left: 20px;
+    padding-right: 0;
     overflow-x: hidden;
     font-family: $font-body; 
 }
@@ -389,8 +390,7 @@ a:hover{
 .cart-img{
     width: 100%;
     height: 280px;
-    object-fit: cover;
-    
+    object-fit: cover;   
 }    
 .cart-menu{
     width: 100%;
@@ -411,6 +411,9 @@ a:hover{
     position: relative;
     font-style: italic; 
 }
+.carte-menu-cadre{
+    padding-bottom: 10px;
+}
 .carte-title{
     font-family: $font-logo-tilte;
 }
@@ -428,16 +431,16 @@ a:hover{
     color: $color-primaire;
 }
 .carte-menu{
-    min-height: 320px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
     padding-left: 20px;
     padding-right: 20px;
+    
 }
 .carte-menu-title{
-    width: 40px;
+    width: 30px;
     height: 30px;
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -445,34 +448,42 @@ a:hover{
 }
 .carte-menu-cadre{
     width: 100%;
-    min-height: 65px;
+    max-height: 65px;
     background-color: white;
     border-radius: 20px;
     line-height: 0.4px;
     position: relative;
     padding-left: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 0px;
+    margin-bottom:20px;
     cursor: pointer;
+    line-height: 0;
     box-shadow:0px -3px 31px -14px $color-header, 0px 3px 15px -4px $color-header;
 }
 .carte-menu-cadre-text{
-    width: 320px;
     height: auto;
 }
 .carte-menu-cadre-tilte{
-    font-weight: bold;  
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+.carte-menu-cadre-descr-price{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 .carte-menu-cadre-descri{
-   
+    width: 350px;
     font-size: 0.9em;
 }
+
 .carte-menu-cadre-price{
-    position: absolute;
-    right: 20px;
-    bottom: 5px;
+    padding-right: 30px;
 }
 .cart-menu-bloc{
-    height: 120px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -520,7 +531,7 @@ a:hover{
 .restaurant__bloc--cadre--text--iconmenu:hover .restaurant__bloc--cadre--text--iconmenu--bg{
     transform: scale(1);
 }
-//la note enchantée cadre //@at-root
+//la note enchantée cadre //
 
 .carte-menu1{
     display: flex;
@@ -535,19 +546,18 @@ a:hover{
 //animation au survol carte menu qui se decale sur la gauche //
 .carte-menu-cadre-animation-gb{
    background-color:$color-tertiaire ;
-   min-height: 65px;
-   width: 65px;
+   min-height: 100%;
+   width: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
    border-radius: 0 20px 20px 0;
    position: absolute;
-   top: 0px;
    bottom: 0;
-   left: 86%;
+   left: 80%;
    z-index: 10;
    transform: scaleX(0);
-   transition: transform 800ms cubic-bezier(.32,0,.07,1);
+   transition: transform 900ms cubic-bezier(.32,0,.07,1);
    transform-origin: right;
    
 }
@@ -559,18 +569,73 @@ a:hover{
     transform: scaleX(1);
 }
 
-//animantion tourner au survol de l'incon//@at-root
+//animantion tourner au survol de l'incon//
 
 .carte-menu-cadre:hover .carte-menu-icon{
     transform: rotate(360deg);
-    transition: 700ms;
+    transition: 900ms;
 }
 
-//Animation pour pousser le bloc ( texte et prix ) vers la gauche au survol//@at-root
+//Animation pour pousser le bloc ( texte et prix ) vers la gauche au survol//
 .carte-menu-cadre-price{
-    transition: transform 700ms;
+    transition: transform 900ms;
 }
 .carte-menu-cadre:hover .carte-menu-cadre-price{
-    transform: translate(-50px,0);
+    transform: translate(-70px,0);
 }
-//Animation des trois petits points 
+//Animation des trois petits points//
+
+    
+// animation defiler des cartes//
+
+@keyframes autre{
+    from{
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.carte-menu-cadre-anim1{
+    opacity: 0;
+    animation: autre 1s ease-out 1s both;
+}
+
+.carte-menu-cadre-anim2{
+    opacity: 0;
+    animation: autre 1s ease-out  1.2s both;
+}
+.carte-menu-cadre-anim3{
+    opacity: 0;
+    animation: autre 1s ease-out 1.4s both;
+}
+
+.carte-menu-cadre-anim4{
+    opacity: 0;
+    animation: autre 1s ease-out 1.6s both;
+}
+
+.carte-menu-cadre-anim5{
+    opacity: 0;
+    animation: autre 1s ease-out  1.8s both;
+}
+.carte-menu-cadre-anim6{
+    opacity: 0;
+    animation: autre 1s ease-out 2s both;
+}
+
+.carte-menu-cadre-anim7{
+    opacity: 0;
+    animation: autre 1s ease-out 2.2s both;
+}
+
+.carte-menu-cadre-anim8{
+    opacity: 0;
+    animation: autre 1s ease-out  2.4s both;
+}
+.carte-menu-cadre-anim9{
+    opacity: 0;
+    animation: autre 1s ease-out 2.6s both;
+}
