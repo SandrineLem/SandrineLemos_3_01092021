@@ -245,6 +245,7 @@ body, html {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  margin: auto;
 }
 
 .restaurant__bloc--cadre--imgtag--tag {
@@ -365,7 +366,7 @@ body, html {
   justify-content: center;
 }
 
-.carte-menu-bloc-title {
+.carte-menu-bloc-title .carte-menu-bloc-title1 {
   padding-top: 10px;
   padding-left: 20px;
   position: relative;
@@ -378,6 +379,7 @@ body, html {
 
 .carte-title {
   font-family: "Shrikhand", cursive;
+  padding-left: 20px;
 }
 
 .carte-menu-bloc-tilte-icon {
@@ -605,4 +607,163 @@ body, html {
 .carte-menu-cadre-anim9 {
   opacity: 0;
   animation: autre 1s ease-out 2.6s both;
+}
+
+@media screen and (min-width: 760px) {
+  .restaurant__bloc--title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .restaurant {
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+
+  .restaurant__bloc {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .restaurant-contenair-responsive {
+    width: 100%;
+  }
+
+  .restaurant-bloc-responsive {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .restaurant__bloc--cadre {
+    min-width: 45%;
+    box-shadow: 0 0 16px #0000002e;
+  }
+
+  .restaurant__bloc {
+    border-radius: 50px 50px 50px 50px;
+  }
+
+  .footer-accueil-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-accueil__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-accueil {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-accueil-resp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main {
+    background: none;
+  }
+
+  .carte-menu-bloc-title {
+    padding-top: 60px;
+  }
+
+  .cart-menu {
+    width: 50%;
+    border-radius: 35px 35px 35px 35px;
+    box-shadow: 0 0 16px #0000002e;
+    top: 380px;
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  .carte-menu-bloc-responsive {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-img {
+    min-height: 420px;
+  }
+
+  .cart-menu-bloc-btn {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .carte-menu-bloc-title {
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .footer-accueil-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-accueil__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-accueil {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-accueil-resp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cart-img {
+    min-height: 580px;
+  }
+
+  .cart-menu {
+    min-width: 1200px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 0;
+    top: 500px;
+  }
+
+  .carte-menu-bloc-responsive {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .carte-menu {
+    width: 350px;
+    height: auto;
+  }
+
+  .carte-menu-bloc-title {
+    padding-left: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .main {
+    max-height: 1180px;
+  }
 }
