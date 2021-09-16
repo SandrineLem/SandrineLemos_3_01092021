@@ -13,7 +13,7 @@ $font-logo-tilte:'Shrikhand', cursive;
 $font-body:'Roboto', sans-serif;
 
 h1,h2{
-    font-family: $font-body;
+    font-family:$font-body;
 }
 
 body,html{
@@ -695,10 +695,9 @@ a:hover{
         box-shadow: 0 0 16px #0000002e;
     }
     .restaurant-contenair-responsive{
-        width: 100%;
-        
-        
+        width: 100%;  
     }
+    //probleme avec safari//
     .restaurant-bloc-responsive{
         min-width: 100%;
         display: flex;
