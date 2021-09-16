@@ -5,7 +5,7 @@ $color-header:#c2c2c2;
 $color-background-fonctionnement: white;
 $color-background-decouvrir: rgb(238, 229, 229);
 $color-icon:rgb(121, 120, 120);
-
+//police et style // 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
@@ -17,6 +17,9 @@ h1,h2{
 }
 h4{
     font-weight: bold;
+}
+p{
+    font-weight: lighter;
 }
 body,html{
     margin: 0;
@@ -31,6 +34,8 @@ body,html{
     overflow-x: hidden;
     font-family: $font-body; 
 }
+//loader// 
+
 @keyframes chargeur {
     0%{
         transform: rotate(0deg) scale(1);
@@ -95,17 +100,8 @@ body,html{
         animation: chargeur 2s linear 2; 
     }    
 }
-          
 
-    
-              
-
-  
-
-    
-    
-    
-
+//header// 
 
 .header{
     display: flex;
@@ -119,7 +115,7 @@ body,html{
     }
 }
     
-
+//cadre maps geocalisation// 
 
 .maps{
     display: flex;
@@ -136,6 +132,7 @@ body,html{
     }
 }
 
+//bouton de la page accueil// 
 
 .decouvrir{
     text-align: center;
@@ -182,6 +179,7 @@ body,html{
 @mixin box-shadow {
     box-shadow: 0px 3px 15px -4px $color-header;
 }
+// fonctionnement des filtres page accueil// 
 
 @mixin fonctionement-filtres {
     border:2px transparent #C2C2C2;
@@ -252,6 +250,7 @@ body,html{
     color:$color-primaire;
 }
 }
+//Presentation sur la page d'accueil des restaurants// 
 
 .restaurant{
     min-height: 1220px;
@@ -338,6 +337,7 @@ body,html{
 .restaurant__bloc--cadre--text--icon:hover .restaurant__bloc--cadre--text--icon--bg{
     transform: scale(1);
 }
+//Cadre footer de la page d'accueil// 
 
 .footer-accueil{
     max-height: 150px;
@@ -369,6 +369,9 @@ a:hover{
     color: $color-primaire;
 }
 }
+// Page de chaque restaurant // 
+
+//header de la page du restaurant //
 
 .header__icon-back{
     position: absolute;
@@ -379,7 +382,7 @@ a:hover{
 .header-icon{
     color: black;
 }
-
+// taille de la page restaurant // 
 .main{
     width: 100%;
     height: 1500px;
@@ -390,12 +393,14 @@ a:hover{
     position: relative;
     margin: 0;
 }
-
+// taille image// 
 .cart-img{
     width: 100%;
     height: 280px;
     object-fit: cover;   
-}    
+} 
+// taille des carte de presentation des menu de chaque restaurant // 
+
 .cart-menu {
     width: 100%;
     height: 1200px;
@@ -408,7 +413,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;     
 }
-//la note enchantee// 
+// Excéption pour le restaurant la note enchantee// 
 .cart-menu1{
     width: 100%;
     height: 1200px;
@@ -421,7 +426,8 @@ a:hover{
     flex-direction: column;
     justify-content: center;     
 }
-//lanote enchante // 
+// les autres restaurants et lanote enchante //
+
 .carte-menu-bloc-title .carte-menu-bloc-title1{
     padding-top: 10px;
     padding-left: 20px;
@@ -460,6 +466,7 @@ a:hover{
     padding-left: 20px;
     padding-right: 20px; 
 }
+// ajustement des cadres sur les autres pages des restaurants exception la note enchantee // 
 
 .carte-menu-bloc-tilte-icon{
     position: relative;
@@ -522,6 +529,7 @@ a:hover{
     width: 350px;
     line-height: 20px;
     font-size: 0.9em;
+    font-weight: lighter;
 }
 
 .carte-menu-cadre-price{
@@ -536,6 +544,8 @@ a:hover{
     justify-content: center;
     
 }
+// cadre du bouton sur les pages des restaurants // 
+
 .cart-menu-bloc-btn{
     color: white;
     width: 200px;
@@ -552,6 +562,8 @@ a:hover{
            box-shadow:0px 11px 10px -5px$color-primaire ,0px 11px 10px -5px $color-secondaire;
         } 
 }
+// placemement du coeur a droite des titres des restaurant et animation du coeur en bg// 
+
 .restaurant__bloc--cadre--text--iconmenu{
     position: absolute;
     right: 70px;
@@ -695,7 +707,7 @@ a:hover{
     opacity: 0;
     animation: autre 1s ease-out 2.6s both;
 }
-//breackpoint ajustement du prix //
+//breackpoint ajustement du prix avec l'animation //
 @media screen and (min-width:560px) {
     .carte-menu-cadre-price{
         padding-right: 65px;
@@ -760,7 +772,7 @@ a:hover{
         flex-direction: row;
         justify-content: space-between;
     }
-    //page restaurant carte et menu //
+    //page des autres restaurants carte et menu exception lanote enchantee //
     .main{
         background: none;
     } 
@@ -780,7 +792,7 @@ a:hover{
     .carte-menu-cadre-price{
         padding-right: 30px;
     }
-    //lanote enchantee//
+    // Ajustement de la page du restaurant la note enchantee//
     .carte-title1{
         padding-top: 40px;
         margin-left: 20px;    
@@ -853,88 +865,88 @@ a:hover{
         }
 }       
 
-//breackpoint ajustement du prix //
+//breackpoint ajustement du prix pour les tailles d'ecrans plus grands //
 @media screen and (min-width:955px) {
     .carte-menu-cadre-price{
         padding-right: 45px;
     }
 }
-//breackpoint ajustement du prix //
+//breackpoint ajustement du prix pour les tailles d'ecrans plus grands //
 @media screen and (min-width: 1055px) {
     .carte-menu-cadre-price{
         padding-right: 80px;
     }
 }
 
-        //responsive cart menu pour plus grand ecran // 
+//responsive cart menu pour plus grand ecran // 
 
-        @media screen and (min-width:1400px) {
-            .cart-img{
-                min-height: 580px;
-            }
-            //page autre restaurant carte et menu //
-            .cart-menu{
-                min-width: 1390px;
-                height: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding-top: 30px;
-                padding-bottom: 0;
-                top: 500px;
-            }
-            .carte-menu-bloc-responsive{
-                width: auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                padding-left: 20px;
-                padding-right: 20px;
+@media screen and (min-width:1400px) {
+    .cart-img{
+        min-height: 580px;
+    }
+//page autre restaurant carte et menu //
+    .cart-menu{
+        min-width: 1390px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 30px;
+        padding-bottom: 0;
+        top: 500px;
+    }
+    .carte-menu-bloc-responsive{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
                 
-            }
-            .carte-menu{
-                width: 100%;
-                height:auto;
-            }
-            .carte-menu-bloc-title{
-                padding-left: 20px;
-                padding-bottom: 0;
-                padding-top: 0;
-            }
-            .main{
-                max-height: 1180px;
-            }
-            //lanote enchantee// 
-            .main1{
-                max-height: 1180px;
-            }
-            .carte-menu1{
-                width: 100%;
-                height:auto;
-            }
-            .cart-menu1{
-                min-width: 1390px;
-                height: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding-top: 30px;
-                padding-bottom: 0;
-                top: 500px;
-            }
-            .carte-menu-bloc-responsive1{
-                width: auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-            .carte-menu-cadre-price{
-                padding-right: 10px;
-            }
+    }
+    .carte-menu{
+        width: 100%;
+        height:auto;
+    }
+    .carte-menu-bloc-title{
+        padding-left: 20px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .main{
+        max-height: 1180px;
+    }
+//lanote enchantee// 
+    .main1{
+        max-height: 1180px;
+    }
+    .carte-menu1{
+        width: 100%;
+        height:auto;
+    }
+    .cart-menu1{
+        min-width: 1390px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 30px;
+        padding-bottom: 0;
+        top: 500px;
+    }
+    .carte-menu-bloc-responsive1{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .carte-menu-cadre-price{
+        padding-right: 10px;
+    }
             
-        }
+}
             
         
         
