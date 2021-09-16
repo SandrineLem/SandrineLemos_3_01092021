@@ -637,7 +637,7 @@ body, html {
 
 .carte-menu-cadre-tilte {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .carte-menu-cadre-descr-price {
@@ -656,6 +656,7 @@ body, html {
 
 .carte-menu-cadre-descri {
   width: 350px;
+  line-height: 20px;
   font-size: 0.9em;
 }
 
@@ -794,12 +795,51 @@ body, html {
           transform: translate(-80px, 0);
 }
 
-.cadre-menu-cadre:hover .carte-menu-cadre-descri {
-  width: 250px;
-  line-height: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+@-webkit-keyframes basverslagauche {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    width: 350px;
+  }
+  100% {
+    -webkit-transform: scaleX(0.99);
+            transform: scaleX(0.99);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    width: 180px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@keyframes basverslagauche {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    width: 350px;
+  }
+  100% {
+    -webkit-transform: scaleX(0.99);
+            transform: scaleX(0.99);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    width: 180px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-descri {
+  -webkit-animation: basverslagauche both 500ms;
+          animation: basverslagauche both 500ms;
 }
 
 @-webkit-keyframes autre {
@@ -880,6 +920,12 @@ body, html {
   opacity: 0;
   -webkit-animation: autre 1s ease-out 2.6s both;
           animation: autre 1s ease-out 2.6s both;
+}
+
+@media screen and (min-width: 560px) {
+  .carte-menu-cadre-price {
+    padding-right: 65px;
+  }
 }
 
 @media screen and (min-width: 760px) {
@@ -968,7 +1014,7 @@ body, html {
     padding-top: 60px;
   }
   .cart-menu {
-    width: 50%;
+    width: 60%;
     height: auto;
     border-radius: 35px 35px 35px 35px;
     -webkit-box-shadow: 0 0 16px #0000002e;
@@ -978,16 +1024,22 @@ body, html {
     padding-bottom: 40px;
     margin-bottom: 20px;
   }
+  .carte-menu-cadre-price {
+    padding-right: 30px;
+  }
   .carte-title1 {
-    padding-top: 0px;
+    padding-top: 40px;
     margin-left: 20px;
+  }
+  .carte-title {
+    padding-top: 40px;
   }
   .main1 {
     height: 1600px;
     background: none;
   }
   .cart-menu1 {
-    width: 50%;
+    width: 60%;
     background: #f6f6f6;
     -webkit-box-shadow: 0 0 16px #0000002e;
             box-shadow: 0 0 16px #0000002e;
@@ -1083,7 +1135,19 @@ body, html {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 955px) {
+  .carte-menu-cadre-price {
+    padding-right: 45px;
+  }
+}
+
+@media screen and (min-width: 1055px) {
+  .carte-menu-cadre-price {
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .cart-img {
     min-height: 580px;
   }
@@ -1167,6 +1231,9 @@ body, html {
         justify-content: space-around;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .carte-menu-cadre-price {
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
