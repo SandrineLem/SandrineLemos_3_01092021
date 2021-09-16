@@ -4,6 +4,10 @@ h1, h2 {
   font-family: "Roboto", sans-serif;
 }
 
+h4 {
+  font-weight: bold;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -583,6 +587,14 @@ body, html {
   transform: translate(-80px, 0);
 }
 
+.cadre-menu-cadre:hover .carte-menu-cadre-descri {
+  width: 250px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @keyframes autre {
   from {
     transform: translateY(-30%);
@@ -666,7 +678,7 @@ body, html {
   .restaurant-bloc-responsive {
     min-width: 100%;
     display: flex;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
   }
 
   .restaurant__bloc--cadre {
@@ -797,7 +809,7 @@ body, html {
   }
 
   .cart-menu {
-    min-width: 1200px;
+    min-width: 1390px;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -817,7 +829,7 @@ body, html {
   }
 
   .carte-menu {
-    width: 350px;
+    width: 100%;
     height: auto;
   }
 
@@ -836,12 +848,12 @@ body, html {
   }
 
   .carte-menu1 {
-    width: 350px;
+    width: 100%;
     height: auto;
   }
 
   .cart-menu1 {
-    min-width: 1200px;
+    min-width: 1390px;
     height: 50%;
     display: flex;
     flex-direction: column;
