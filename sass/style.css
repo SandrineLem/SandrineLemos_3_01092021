@@ -973,7 +973,7 @@ body, html {
     padding-left: 10px;
   }
   .restaurant__bloc--cadre {
-    min-width: 45%;
+    max-width: 45%;
     -webkit-box-shadow: 0 0 16px #0000002e;
             box-shadow: 0 0 16px #0000002e;
   }
