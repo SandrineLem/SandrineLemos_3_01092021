@@ -173,7 +173,7 @@ body, html {
   background-color: #fafafa;
   align-items: center;
   cursor: pointer;
-  min-width: 330px;
+  max-width: 100%;
   margin-left: 30px;
   margin-bottom: 20px;
   height: 70px;
@@ -212,20 +212,17 @@ body, html {
   min-height: 1220px;
   margin: auto;
 }
-
-.restaurant__bloc {
+.restaurant .restaurant__bloc {
   padding-right: 30px;
   padding-left: 30px;
   background-color: #F6F6F6;
   justify-content: center;
   padding-bottom: 30px;
 }
-
-.restaurant__bloc--title {
+.restaurant .restaurant__bloc .restaurant__bloc--title {
   padding-top: 40px;
 }
-
-.restaurant__bloc--cadre {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre {
   min-width: 300px;
   height: 270px;
   background-color: white;
@@ -236,18 +233,15 @@ body, html {
   cursor: pointer;
   margin-top: 30px;
 }
-
-.restaurant__bloc--cadre--lien {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--lien {
   text-decoration: none;
   color: black;
 }
-
-.restaurant__bloc--cadre--imgtag {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--imgtag {
   position: relative;
   text-align: center;
 }
-
-.restaurant__bloc--cadre--imgtag--img {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--imgtag .restaurant__bloc--cadre--imgtag--img {
   background-size: cover;
   background-position: center;
   border-radius: 15px 15px 0 0;
@@ -256,8 +250,7 @@ body, html {
   object-fit: cover;
   margin: auto;
 }
-
-.restaurant__bloc--cadre--imgtag--tag {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--imgtag .restaurant__bloc--cadre--imgtag--tag {
   color: #217460;
   background-color: #99e2d0;
   padding: 8px 16px 8px 16px;
@@ -270,28 +263,24 @@ body, html {
   top: 12px;
   right: 10px;
 }
-
-.restaurant__bloc--cadre--text {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--text {
   position: relative;
   line-height: 30%;
   padding-left: 15px;
   padding-bottom: 10px;
 }
-
-.restaurant__bloc--cadre--text--icon {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon {
   position: absolute;
   right: 70px;
   bottom: 60px;
   cursor: pointer;
 }
-
-.restaurant__bloc--cadre--text--icon--nobg {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon .restaurant__bloc--cadre--text--icon--nobg {
   position: absolute;
   cursor: pointer;
   background-color: transparent;
 }
-
-.restaurant__bloc--cadre--text--icon--bg {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon .restaurant__bloc--cadre--text--icon--bg {
   position: absolute;
   cursor: pointer;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
@@ -300,8 +289,7 @@ body, html {
   transition: 0.5s;
   transform: scale(0);
 }
-
-.restaurant__bloc--cadre--text--icon:hover .restaurant__bloc--cadre--text--icon--bg {
+.restaurant .restaurant__bloc .restaurant__bloc--cadre .restaurant__bloc--cadre--text .restaurant__bloc--cadre--text--icon:hover .restaurant__bloc--cadre--text--icon--bg {
   transform: scale(1);
 }
 
@@ -676,6 +664,21 @@ body, html {
   }
 }
 @media screen and (min-width: 760px) {
+  .fonctionnement-responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fonctionnement__filtres {
+    padding-right: 40px;
+  }
+
+  .fonctionnement__titlte {
+    padding-left: 30px;
+  }
+
   .restaurant__bloc--title {
     margin-bottom: 0;
     margin-top: 0;
@@ -708,7 +711,7 @@ body, html {
   }
 
   .restaurant__bloc--cadre {
-    max-width: 45%;
+    width: 45%;
     box-shadow: 0 0 16px #0000002e;
   }
 
@@ -848,6 +851,17 @@ body, html {
   }
 }
 @media screen and (min-width: 1400px) {
+  .fonctionnement-responsive {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .fonctionnement__filtres {
+    width: 330px;
+  }
+
   .cart-img {
     min-height: 580px;
   }
