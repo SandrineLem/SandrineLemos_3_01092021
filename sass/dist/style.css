@@ -663,7 +663,7 @@ body, html {
     padding-right: 65px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 770px) {
   .fonctionnement-responsive {
     width: 100%;
     display: flex;

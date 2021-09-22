@@ -718,10 +718,9 @@ body,html{
 
 //page accueil// 
 
-@media screen and (min-width:760px){
+@media screen and (min-width:770px){
     //filtres fonctionnements//
-
-        .fonctionnement-responsive{
+    .fonctionnement-responsive{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -733,6 +732,7 @@ body,html{
     .fonctionnement__titlte{
         padding-left: 30px;
     }
+        
     .restaurant__bloc--title{
         margin-bottom: 0;
         margin-top: 0;
