@@ -671,12 +671,12 @@ body,html{
     } 
 
 
-// animation defiler des cartes//
-
+// animation defiler des cartes a verifier par Terrence //
 .carte-menu-cadre-anim1{
     opacity: 0;
     animation: autre 1s ease-out 1s both;
 }
+
 
 .carte-menu-cadre-anim2{
     opacity: 0;
@@ -714,9 +714,19 @@ body,html{
     opacity: 0;
     animation: autre 1s ease-out 2.6s both;
 }
-@mixin carte-menu-cadre {
-    
+
+//essai pour les boucles probleme pour ajouter que 0.2s sur chaque classe // 
+@for $i from 1 through 9 {
+    .carte-menu-cadre-anim#{$i}{
+        opacity: 0;
+        animation: autre 1s ease-out ($i both) + 0.2s;
+    }
 }
+// Voir Par Terrence (Mentor)//
+
+    
+
+
 @keyframes autre{
     from{
         transform: translateY(-30%);

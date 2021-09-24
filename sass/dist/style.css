@@ -650,6 +650,51 @@ body, html {
   animation: autre 1s ease-out 2.6s both;
 }
 
+.carte-menu-cadre-anim1 {
+  opacity: 0;
+  animation: autre 1s ease-out 1 both0.2s;
+}
+
+.carte-menu-cadre-anim2 {
+  opacity: 0;
+  animation: autre 1s ease-out 2 both0.2s;
+}
+
+.carte-menu-cadre-anim3 {
+  opacity: 0;
+  animation: autre 1s ease-out 3 both0.2s;
+}
+
+.carte-menu-cadre-anim4 {
+  opacity: 0;
+  animation: autre 1s ease-out 4 both0.2s;
+}
+
+.carte-menu-cadre-anim5 {
+  opacity: 0;
+  animation: autre 1s ease-out 5 both0.2s;
+}
+
+.carte-menu-cadre-anim6 {
+  opacity: 0;
+  animation: autre 1s ease-out 6 both0.2s;
+}
+
+.carte-menu-cadre-anim7 {
+  opacity: 0;
+  animation: autre 1s ease-out 7 both0.2s;
+}
+
+.carte-menu-cadre-anim8 {
+  opacity: 0;
+  animation: autre 1s ease-out 8 both0.2s;
+}
+
+.carte-menu-cadre-anim9 {
+  opacity: 0;
+  animation: autre 1s ease-out 9 both0.2s;
+}
+
 @keyframes autre {
   from {
     transform: translateY(-30%);
