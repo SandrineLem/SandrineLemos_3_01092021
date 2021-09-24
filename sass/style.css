@@ -13,6 +13,7 @@ p {
 }
 
 body, html {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -20,7 +21,7 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
-.bloc_plage {
+.bloc_page {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -460,7 +461,6 @@ body, html {
 
 .header__icon-back {
   position: absolute;
-  width: 100%;
   left: 20px;
 }
 
@@ -1160,6 +1160,8 @@ body, html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin: 0;
+    padding: 0;
   }
 }
 

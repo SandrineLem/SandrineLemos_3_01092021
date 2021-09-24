@@ -1,3 +1,4 @@
+// les variables// 
 $color-primaire:#9356DC;
 $color-secondaire:#FF79DA;
 $color-tertiaire:#99E2D0;
@@ -11,6 +12,16 @@ $color-icon:rgb(121, 120, 120);
 
 $font-logo-tilte:'Shrikhand', cursive;
 $font-body:'Roboto', sans-serif;
+$padding-left:20px;
+$padding-right:20px;
+$padding-bottom:20px;
+$padding-top:20px;
+$margin-left:20px;
+$margin-right:20px;
+$margin-top:20px;
+$margin-bottom:20px;
+$margin:auto;
+
 
 h1,h2{
     font-family:$font-body;
@@ -22,13 +33,14 @@ p{
     font-weight: lighter;
 }
 body,html{
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: $font-body;
 }
-.bloc_plage{
+.bloc_page{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -129,7 +141,7 @@ body,html{
     height: 50px;
     margin: 0;
     .maps__icon{
-        margin-right: 20px;
+        margin-right:$margin-right;
         cursor: pointer;
     }
 }
@@ -144,12 +156,12 @@ body,html{
     .decouvrir__title{
         font-weight: bold;
         font-size: 1.5em;
-        margin-top: 20px;
+        margin-top:$margin-top;
     }
     .decouvrir__subtitle{
         font-size: 1.5rem;
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top:$margin-top;
+        margin-bottom: $margin-bottom + 10px;
     }
     .decouvrir__btn{
        width: 200px;
@@ -175,8 +187,8 @@ body,html{
 }
 
 @mixin margin-h2{
-    margin-left: 20px;
-    margin-top: 40px;
+    margin-left: $margin-left;
+    margin-top: $margin-top + 20px;
 }
 
 @mixin box-shadow {
@@ -188,14 +200,14 @@ body,html{
     border:2px transparent #C2C2C2;
     max-height: 100px;
     border-radius: 30px;
-    margin-right: 20px;
+    margin-right: $margin-right;
     display: flex;
     background-color:rgb(250, 250, 250);
     align-items: center;
     cursor: pointer;
     max-width: 100%;
-    margin-left: 30px;
-    margin-bottom: 20px;
+    margin-left: $margin-left + 10px;
+    margin-bottom:$margin-bottom;
     height: 70px; 
     box-shadow: 0px -3px 31px -14px $color-header;
 }
@@ -211,11 +223,11 @@ body,html{
       padding-top: 2px;
       text-align: center;
       border: 1px solid $color-primaire;    
-      margin-right: 30px; 
+      margin-right: $margin-right + 10px; 
 }
 @mixin fonctionnement-icon {
     color:$color-icon;
-    margin-right: 50px;
+    margin-right: $margin-right + 30px;
     
 }
 
@@ -223,11 +235,11 @@ body,html{
 .fonctionnement{
     width: 100%;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom:$padding-bottom;
     
     .fonctionnement__titlte{
     @include margin-h2;
-    padding-bottom: 15px
+    padding-bottom: $padding-bottom - 5px;
 }
     .fonctionnement__filtres{
     @include fonctionement-filtres;
@@ -257,15 +269,15 @@ body,html{
 
 .restaurant{
     min-height: 1220px;
-    margin: auto;
+    margin: $margin;
     .restaurant__bloc{
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: $padding-right + 10px;
+    padding-left: $padding-left + 10px;
     background-color:#F6F6F6;
     justify-content: center;
-    padding-bottom: 30px;
+    padding-bottom: $padding-bottom + 10px;
     .restaurant__bloc--title{
-    padding-top: 40px;
+    padding-top: $padding-top + 20px;
     }
     .restaurant__bloc--cadre{
     min-width: 300px;
@@ -276,7 +288,7 @@ body,html{
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: $margin-top + 10px;
     .restaurant__bloc--cadre--lien{
     text-decoration: none;
     color: black;
@@ -291,7 +303,7 @@ body,html{
     width: 100%;
     height: 200px;
     object-fit: cover;
-    margin: auto;
+    margin: $margin;
     }
     .restaurant__bloc--cadre--imgtag--tag{
     color: #217460;
@@ -310,8 +322,8 @@ body,html{
     .restaurant__bloc--cadre--text{
     position: relative;
     line-height: 30%;
-    padding-left: 15px;
-    padding-bottom: 10px;
+    padding-left: $padding-left - 5px;
+    padding-bottom: $padding-bottom - 10px;
     .restaurant__bloc--cadre--text--icon{
     position: absolute;
     right: 70px;
@@ -350,10 +362,10 @@ body,html{
         .footer-accueil__logo{
         height: 20px;
         width: 100px;
-        padding-bottom: 10px;
+        padding-bottom: $padding-bottom - 10px;
         }
         .footer-accueil__icon{
-        padding-right: 10px;  
+        padding-right: $padding-right - 10px;  
     }
         .footer-accueil__text{
         display: flex;
@@ -377,8 +389,8 @@ body,html{
 
 .header__icon-back{
     position: absolute;
-    width: 100%;
     left: 20px;
+    
     
 }
 .header-icon{
@@ -431,22 +443,22 @@ body,html{
 // les autres restaurants et lanote enchante //
 
 .carte-menu-bloc-title .carte-menu-bloc-title1{
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-top: $padding-top - 10px;
+    padding-left:$padding-left;
     position: relative;
     font-style: italic; 
 }
 .carte-menu-cadre{
-    padding-bottom: 10px;
+    padding-bottom: $padding-bottom - 10px;
 }
 .carte-title {
     font-family: $font-logo-tilte;
-    padding-left: 20px;
+    padding-left: $padding-left;
 }
 //la note enchantee// 
 .carte-title1{
     font-family: $font-logo-tilte;
-    padding-left: 20px;
+    padding-left: $padding-left;
 }
 // la note enchantée(1)// 
 //la note enchantée cadre (1) //
@@ -465,8 +477,8 @@ body,html{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding-left: 20px;
-    padding-right: 20px; 
+    padding-left: $padding-left;
+    padding-right: $padding-right; 
 }
 // ajustement des cadres sur les autres pages des restaurants exception la note enchantee // 
 
@@ -488,15 +500,15 @@ body,html{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $padding-left;
+    padding-right: $padding-right;
     
 }
 .carte-menu-title{
     width: 30px;
     height: 30px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+    margin-bottom: $padding-bottom - 5px;
+    padding-bottom: $padding-bottom - 10px;
     border-bottom: 4px solid $color-tertiaire;
 }
 .carte-menu-cadre{
@@ -506,9 +518,9 @@ body,html{
     border-radius: 20px;
     line-height: 0.4px;
     position: relative;
-    padding-left: 10px;
+    padding-left:$padding-left - 10px;
     padding-bottom: 0px;
-    margin-bottom:20px;
+    margin-bottom:$margin-bottom;
     cursor: pointer;
     line-height: 0;
     box-shadow:0px -3px 31px -14px $color-header, 0px 3px 15px -4px $color-header;
@@ -535,7 +547,7 @@ body,html{
 }
 
 .carte-menu-cadre-price{
-    padding-right: 30px;
+    padding-right: $padding-right + 10px;
 }
 .cart-menu-bloc{
     height: 200px;
@@ -564,6 +576,7 @@ body,html{
            box-shadow:0px 10px 8px -5px rgba($color: #000000, $alpha: 0.5);
            background: linear-gradient(to bottom right,rgba($color: #FF79DA, $alpha: 0.96),rgba($color: #9356DC, $alpha: 0.96));
         } 
+    
 }
 // placemement du coeur a droite des titres des restaurant et animation du coeur en bg// 
 
@@ -713,7 +726,7 @@ body,html{
 //breackpoint ajustement du prix avec l'animation //
 @media screen and (min-width:560px) {
     .carte-menu-cadre-price{
-        padding-right: 65px;
+        padding-right: $padding-right + 45px;
     }
 }
 // responsive ipad// 
@@ -729,10 +742,10 @@ body,html{
         flex-wrap:wrap ;
     }
     .fonctionnement__filtres{
-        padding-right: 40px;
+        padding-right: $padding-right + 20px;
     }
     .fonctionnement__titlte{
-        padding-left: 30px;
+        padding-left: $padding-left + 10px;
     }
         
     .restaurant__bloc--title{
@@ -741,13 +754,13 @@ body,html{
     }
     .restaurant{
         min-height: auto;
-        margin-bottom: 40px;
+        margin-bottom: $margin-bottom + 20px;
     }
     .restaurant__bloc{
         max-width: 100%;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-left: 10px;
+        margin-left: $margin-left;
+        margin-right: $margin-right;
+        padding-left: $padding-left - 10px;
         display: flex;
         flex-direction: column;
         box-shadow: 0 0 16px #0000002e;
@@ -760,7 +773,7 @@ body,html{
         min-width: 100%;
         display: flex;
         -webkit-justify-content: space-around;
-        padding-left: 10px;
+        padding-left: $padding-left - 10px;
        
     }
     .restaurant__bloc--cadre{
@@ -795,7 +808,7 @@ body,html{
         background: none;
     } 
     .carte-menu-bloc-title{
-       padding-top: 60px;
+       padding-top: $padding-top + 40px;
     }
     .cart-menu{
         width: 60%;
@@ -804,19 +817,19 @@ body,html{
         box-shadow: 0 0 16px #0000002e;
         top: 380px;
         height: auto;
-        padding-bottom: 40px;
-        margin-bottom: 20px;
+        padding-bottom: $padding-bottom + 20px;
+        margin-bottom: $margin-bottom;
     }
     .carte-menu-cadre-price{
-        padding-right: 30px;
+        padding-right: $padding-right + 10px;
     }
     // Ajustement de la page du restaurant la note enchantee//
     .carte-title1{
-        padding-top: 40px;
-        margin-left: 20px;    
+        padding-top: $padding-top + 20px;
+        margin-left: $margin-left;    
     }  
     .carte-title{
-        padding-top: 40px;    
+        padding-top: $padding-top + 20px;    
     }   
     .main1{
         height: 1600px;
@@ -840,8 +853,8 @@ body,html{
         flex-direction: column;
         flex-wrap: wrap;
         align-content: flex-start;
-        padding-left: 20px;
-        padding-right: 20px; 
+        padding-left: $padding-left;
+        padding-right: $padding-right; 
     }
     
     //autres restaurants// 
@@ -853,11 +866,11 @@ body,html{
         min-height: 420px;
     }
     .cart-menu-bloc-btn{
-        margin-top: 10px;
-        margin-bottom: 60px;
+        margin-top: $margin-top - 10px;
+        margin-bottom: $margin-bottom + 40px;
     }
     .carte-menu-bloc-title{
-        padding-left: 20px;
+        padding-left: $padding-left;
     }
     
 }
@@ -875,24 +888,27 @@ body,html{
         .footer-accueil{
             display: flex;
             flex-direction: column;
+            
         }
         .footer-accueil-resp{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin: 0;
+            padding: 0;
         }
 }       
 
 //breackpoint ajustement du prix pour les tailles d'ecrans plus grands //
 @media screen and (min-width:955px) {
     .carte-menu-cadre-price{
-        padding-right: 45px;
+        padding-right: $padding-right + 25px;
     }
 }
 //breackpoint ajustement du prix pour les tailles d'ecrans plus grands //
 @media screen and (min-width: 1055px) {
     .carte-menu-cadre-price{
-        padding-right: 80px;
+        padding-right: $padding-right + 60px;
     }
 }
 
@@ -918,7 +934,7 @@ body,html{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-top: 30px;
+        padding-top: $padding-top + 10px;
         padding-bottom: 0;
         top: 500px;
     }
@@ -927,8 +943,8 @@ body,html{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: $padding-left;
+        padding-right: $padding-right;
                 
     }
     .carte-menu{
@@ -936,7 +952,7 @@ body,html{
         height:auto;
     }
     .carte-menu-bloc-title{
-        padding-left: 20px;
+        padding-left: $padding-left;
         padding-bottom: 0;
         padding-top: 0;
     }
@@ -957,7 +973,7 @@ body,html{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-top: 30px;
+        padding-top: $padding-top + 10px;
         padding-bottom: 0;
         top: 500px;
     }
@@ -966,11 +982,11 @@ body,html{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: $padding-left;
+        padding-right: $padding-right;
     }
     .carte-menu-cadre-price{
-        padding-right: 10px;
+        padding-right: $padding-right - 10px;
     }
             
 }       
