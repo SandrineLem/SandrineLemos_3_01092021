@@ -819,7 +819,7 @@ body, html {
     padding-left: 20px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 667px) {
   .footer-accueil-img {
     display: flex;
     justify-content: center;
