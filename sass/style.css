@@ -854,32 +854,6 @@ body, html {
           animation: basverslagauche both 500ms;
 }
 
-@-webkit-keyframes autre {
-  from {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes autre {
-  from {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
 .carte-menu-cadre-anim1 {
   opacity: 0;
   -webkit-animation: autre 1s ease-out 1s both;
@@ -932,6 +906,32 @@ body, html {
   opacity: 0;
   -webkit-animation: autre 1s ease-out 2.6s both;
           animation: autre 1s ease-out 2.6s both;
+}
+
+@-webkit-keyframes autre {
+  from {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes autre {
+  from {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 560px) {

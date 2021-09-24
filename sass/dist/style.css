@@ -605,16 +605,6 @@ body, html {
   animation: basverslagauche both 500ms;
 }
 
-@keyframes autre {
-  from {
-    transform: translateY(-30%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 .carte-menu-cadre-anim1 {
   opacity: 0;
   animation: autre 1s ease-out 1s both;
@@ -660,6 +650,16 @@ body, html {
   animation: autre 1s ease-out 2.6s both;
 }
 
+@keyframes autre {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 560px) {
   .carte-menu-cadre-price {
     padding-right: 65px;

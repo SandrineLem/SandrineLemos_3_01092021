@@ -673,16 +673,6 @@ body,html{
 
 // animation defiler des cartes//
 
-@keyframes autre{
-    from{
-        transform: translateY(-30%);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
 .carte-menu-cadre-anim1{
     opacity: 0;
     animation: autre 1s ease-out 1s both;
@@ -724,6 +714,23 @@ body,html{
     opacity: 0;
     animation: autre 1s ease-out 2.6s both;
 }
+@mixin carte-menu-cadre {
+    
+}
+@keyframes autre{
+    from{
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+
+
 //breackpoint ajustement du prix avec l'animation //
 @media screen and (min-width:560px) {
     .carte-menu-cadre-price{
