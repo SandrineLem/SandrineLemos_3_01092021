@@ -66,6 +66,9 @@ body, html {
   }
 }
 .bloc-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -74,9 +77,6 @@ body, html {
   width: 100%;
   height: 100%;
   background: rgba(168, 164, 164, 0.432);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   visibility: hidden;
   opacity: 1;
   animation: opacity 3s linear both;
@@ -106,8 +106,8 @@ body, html {
 
 .maps {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background: -moz-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
   background: -webkit-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
   background: linear-gradient(to bottom, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
@@ -340,7 +340,7 @@ body, html {
   height: 1500px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   background: #f6f6f6;
   position: relative;
   margin: 0;
@@ -404,7 +404,7 @@ body, html {
   height: 1500px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   background: #f6f6f6;
   position: relative;
   margin: 0;
@@ -496,9 +496,9 @@ body, html {
   height: 200px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .cart-menu-bloc-btn {

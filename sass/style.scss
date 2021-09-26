@@ -1,4 +1,4 @@
-// les variables// 
+// les variables couleurs// 
 $color-primaire:#9356DC;
 $color-secondaire:#FF79DA;
 $color-tertiaire:#99E2D0;
@@ -6,12 +6,12 @@ $color-header:#c2c2c2;
 $color-background-fonctionnement: white;
 $color-background-decouvrir: rgb(238, 229, 229);
 $color-icon:rgb(121, 120, 120);
-//police et style // 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
+//variables police// 
 $font-logo-tilte:'Shrikhand', cursive;
 $font-body:'Roboto', sans-serif;
+
+//variables marges inter. exter. // 
 $padding-left:20px;
 $padding-right:20px;
 $padding-bottom:20px;
@@ -21,7 +21,16 @@ $margin-right:20px;
 $margin-top:20px;
 $margin-bottom:20px;
 $margin:auto;
+// mixins flexbox//
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+//police et style // 
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
 
 h1,h2{
     font-family:$font-body;
@@ -89,6 +98,7 @@ body,html{
 }
 
 .bloc-loader{
+    @include flexcenter;
     position: fixed;
     z-index: 5;
     top: 0;
@@ -97,9 +107,6 @@ body,html{
     width: 100%;
     height: 100%;
     background: rgba(168, 164, 164, 0.432);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     visibility: hidden;
     opacity: 1;
     animation: opacity 3s linear both;
@@ -116,11 +123,10 @@ body,html{
 }
 
 //header// 
+//mixins // 
 
 .header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexcenter;
     padding:15px 0 15px 0;
     .header__logo{
     font-family: $font-logo-tilte;
@@ -132,9 +138,7 @@ body,html{
 //cadre maps geocalisation// 
 
 .maps{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexcenter;
     background: -moz-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
     background: -webkit-linear-gradient(top, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
     background: linear-gradient(to bottom, #c2c2c2 0%, #e9e9e9 10%, #e9e9e9 100%);
@@ -266,7 +270,12 @@ body,html{
 }
 }
 //Presentation sur la page d'accueil des restaurants// 
-
+@mixin flexcollumjusticenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
 .restaurant{
     min-height: 1220px;
     margin: $margin;
@@ -284,9 +293,7 @@ body,html{
     height: 270px;
     background-color: white;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexcollumjusticenter;
     cursor: pointer;
     margin-top: $margin-top + 10px;
     box-shadow: 0px 10px 25px -14px rgb(121, 120, 120);
@@ -354,7 +361,13 @@ body,html{
 }
 
 //Cadre footer de la page d'accueil// 
-
+@mixin flexcollumwrapstart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
 .footer-accueil{
     max-height: 150px;
     background: rgb(44, 43, 43);
@@ -369,10 +382,7 @@ body,html{
         padding-right: $padding-right - 10px;  
     }
         .footer-accueil__text{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        @include flexcollumwrapstart;
         line-height: 25px;
     }
     a{
@@ -384,15 +394,14 @@ body,html{
     color: $color-primaire;
 }
 }
+
 // Page de chaque restaurant // 
 
 //header de la page du restaurant //
 
 .header__icon-back{
     position: absolute;
-    left: 20px;
-    
-    
+    left: 20px;  
 }
 .header-icon{
     color: black;
@@ -401,9 +410,7 @@ body,html{
 .main{
     width: 100%;
     height: 1500px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include flexcenter;
     background: #f6f6f6;
     position: relative;
     margin: 0;
@@ -424,9 +431,7 @@ body,html{
     position: absolute;
     bottom: 0px;
     top: 248px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     
+    @include flexcollumjusticenter;     
 }
 // Excéption pour le restaurant la note enchantee (1)// 
 .cart-menu1{
@@ -437,9 +442,7 @@ body,html{
     position: absolute;
     bottom: 0px;
     top: 248px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     
+    @include flexcollumjusticenter;     
 }
 // les autres restaurants et lanote enchante //
 
@@ -463,26 +466,40 @@ body,html{
 }
 // la note enchantée(1)// 
 //la note enchantée cadre (1) //
+@mixin flexcollumwrapstartalicont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    
+}
 .main1{
     width: 100%;
     height: 1500px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include flexcenter;
     background: #f6f6f6;
     position: relative;
     margin: 0;
 }
 .carte-menu1{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    @include flexcollumwrapstartalicont;
     padding-left: $padding-left;
     padding-right: $padding-right; 
 }
 // ajustement des cadres sur les autres pages des restaurants exception la note enchantee // 
-
+@mixin flexrowspabet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+@mixin flexcollumcenterwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
 .carte-menu-bloc-tilte-icon{
     position: relative;
 }
@@ -497,10 +514,7 @@ body,html{
     color: $color-primaire;
 }
 .carte-menu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    @include flexcollumwrapstartalicont;
     padding-left: $padding-left;
     padding-right: $padding-right;
     
@@ -535,9 +549,7 @@ body,html{
 }
 .carte-menu-cadre-descr-price{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexrowspabet;
     
 }
 .carte-menu-cadre-descri{
@@ -552,12 +564,7 @@ body,html{
 }
 .cart-menu-bloc{
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    
+    @include flexcollumcenterwrap; 
 }
 // cadre du bouton sur les pages des restaurants // 
 
@@ -613,9 +620,7 @@ body,html{
    background-color:$color-tertiaire ;
    min-height: 100%;
    width: 20%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   @include flexcenter;
    border-radius: 0 20px 20px 0;
    position: absolute;
    bottom: 0;
@@ -702,14 +707,22 @@ $j:0.8;
 // responsive ipad// 
 
 //page accueil// 
-
+@mixin flexjustcenterwrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
 @media screen and (min-width:770px){
     //filtres fonctionnements//
     .fonctionnement-responsive{
         width: 100%;
+        @include flexjustcenterwrap;
+    }
+    @mixin flexcollum {
         display: flex;
-        justify-content: center;
-        flex-wrap:wrap ;
+        flex-direction: column;
+        
     }
     .fonctionnement__filtres{
         padding-right: $padding-right + 20px;
@@ -731,47 +744,51 @@ $j:0.8;
         margin-left: $margin-left;
         margin-right: $margin-right;
         padding-left: $padding-left - 10px;
-        display: flex;
-        flex-direction: column;
+        @include flexcollum;
         box-shadow: 0 0 16px #0000002e;
     }
     .restaurant-contenair-responsive{
         width: 100%;  
     }
-    
     .restaurant-bloc-responsive{
         min-width: 100%;
         display: flex;
         -webkit-justify-content: space-around;
-        padding-left: $padding-left - 10px;
-       
+        padding-left: $padding-left - 10px;  
     }
     .restaurant__bloc--cadre{
         width: 45%;
         box-shadow: 0 0 16px #0000002e;
       }
     .restaurant__bloc{
-        border-radius: 50px 50px 50px 50px;
-        
+        border-radius: 50px 50px 50px 50px;    
     }
 
-    //footer accueil// 
-    .footer-accueil-img{
+    //footer accueil//
+    @mixin flexjusticenter {
         display: flex;
-        justify-content: center;
+        justify-content: center;   
     }
-    .footer-accueil__text{
+    @mixin flexjustispacebet {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between
     }
-    .footer-accueil{
-        display: flex;
-        flex-direction: column;
-    }
-    .footer-accueil-resp{
+    @mixin flexrowjustispacebet {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .footer-accueil-img{
+        @include flexjusticenter;
+    }
+    .footer-accueil__text{
+       @include flexjustispacebet;
+    }
+    .footer-accueil{
+        @include flexcollum;
+    }
+    .footer-accueil-resp{
+        @include flexrowjustispacebet;
     }
     //page des autres restaurants carte et menu exception lanote enchantee //
     .main{
@@ -813,24 +830,18 @@ $j:0.8;
         position: absolute;
         bottom:0;
         top: 380px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;     
+        @include flexcollumjusticenter;
     }
     .carte-menu1{
         height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: flex-start;
+        @include flexcollumwrapstartalicont;
         padding-left: $padding-left;
         padding-right: $padding-right; 
     }
     
     //autres restaurants// 
     .carte-menu-bloc-responsive{
-        display: flex;
-        flex-direction: column;
+        @include flexcollum;
     }
     .cart-img{
         min-height: 420px;
@@ -845,25 +856,33 @@ $j:0.8;
     
 }
 
-@media screen and (min-width:667px){
-        //footer accueil// 
-        .footer-accueil-img{
+@media screen and (min-width:667px){ 
+    //mixin//
+    @mixin flexjusticenter {
             display: flex;
-            justify-content: center;
+            justify-content: center;   
         }
-        .footer-accueil__text{
+        @mixin flexjustspacebet {
             display: flex;
             justify-content: space-between;
         }
-        .footer-accueil{
+        @mixin flexcollum {
             display: flex;
             flex-direction: column;
-            
+        }
+        //footer accueil// 
+       
+        .footer-accueil-img{
+            @include flexjusticenter;
+        }
+        .footer-accueil__text{
+            @include flexjustspacebet;
+        }
+        .footer-accueil{
+        @include flexcollum;    
         }
         .footer-accueil-resp{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include flexrowspabet;
             margin: 0;
             padding: 0;
         }
@@ -883,13 +902,15 @@ $j:0.8;
 }
 
 //responsive cart menu pour plus grand ecran // 
-
+@mixin flexjustspaceevenwrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;   
+}
 @media screen and (min-width:1400px) {
     .fonctionnement-responsive{
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap:wrap ;
+        @include flexjustspaceevenwrap;
     }
     .fonctionnement__filtres{
         width: 330px;
@@ -898,21 +919,28 @@ $j:0.8;
         min-height: 580px;
     }
 //page autre restaurant carte et menu //
+@mixin flexcollumjustspaceevenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+}
+@mixin flexrowjustistapcearound {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
     .cart-menu{
         min-width: 1390px;
         height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+       @include flexcollumjustspaceevenly;
         padding-top: $padding-top + 10px;
         padding-bottom: 0;
         top: 500px;
     }
     .carte-menu-bloc-responsive{
+        
         width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexrowjustistapcearound;
         padding-left: $padding-left;
         padding-right: $padding-right;
                 
@@ -940,18 +968,14 @@ $j:0.8;
     .cart-menu1{
         min-width: 1390px;
         height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        @include flexcollumjustspaceevenly;
         padding-top: $padding-top + 10px;
         padding-bottom: 0;
         top: 500px;
     }
     .carte-menu-bloc-responsive1{
         width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexrowjustistapcearound;
         padding-left: $padding-left;
         padding-right: $padding-right;
     }
