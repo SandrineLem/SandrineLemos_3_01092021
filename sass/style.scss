@@ -672,60 +672,7 @@ body,html{
 
 
 // animation defiler des cartes a verifier par Terrence //
-.carte-menu-cadre-anim1{
-    opacity: 0;
-    animation: autre 1s ease-out 1s both;
-}
-
-
-.carte-menu-cadre-anim2{
-    opacity: 0;
-    animation: autre 1s ease-out  1.2s both;
-}
-.carte-menu-cadre-anim3{
-    opacity: 0;
-    animation: autre 1s ease-out 1.4s both;
-}
-
-.carte-menu-cadre-anim4{
-    opacity: 0;
-    animation: autre 1s ease-out 1.6s both;
-}
-
-.carte-menu-cadre-anim5{
-    opacity: 0;
-    animation: autre 1s ease-out  1.8s both;
-}
-.carte-menu-cadre-anim6{
-    opacity: 0;
-    animation: autre 1s ease-out 2s both;
-}
-
-.carte-menu-cadre-anim7{
-    opacity: 0;
-    animation: autre 1s ease-out 2.2s both;
-}
-
-.carte-menu-cadre-anim8{
-    opacity: 0;
-    animation: autre 1s ease-out  2.4s both;
-}
-.carte-menu-cadre-anim9{
-    opacity: 0;
-    animation: autre 1s ease-out 2.6s both;
-}
-
-//essai pour les boucles probleme pour ajouter que 0.2s sur chaque classe // 
-@for $i from 1 through 9 {
-    .carte-menu-cadre-anim#{$i}{
-        opacity: 0;
-        animation: autre 1s ease-out ($i both) + 0.2s;
-    }
-}
-// Voir Par Terrence (Mentor)//
-
-    
-
+$j:0.8;
 
 @keyframes autre{
     from{
@@ -738,8 +685,13 @@ body,html{
     }
 }
 
-
-
+@for $i from 1 through 9 {
+    $j: $j + 0.2;
+    .carte-menu-cadre-anim#{$i}{
+        opacity: 0;
+        animation: autre 1s ease-out #{$j}s both;
+    }
+}
 
 //breackpoint ajustement du prix avec l'animation //
 @media screen and (min-width:560px) {

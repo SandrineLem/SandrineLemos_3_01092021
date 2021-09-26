@@ -854,114 +854,6 @@ body, html {
           animation: basverslagauche both 500ms;
 }
 
-.carte-menu-cadre-anim1 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 1s both;
-          animation: autre 1s ease-out 1s both;
-}
-
-.carte-menu-cadre-anim2 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out  1.2s both;
-          animation: autre 1s ease-out  1.2s both;
-}
-
-.carte-menu-cadre-anim3 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 1.4s both;
-          animation: autre 1s ease-out 1.4s both;
-}
-
-.carte-menu-cadre-anim4 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 1.6s both;
-          animation: autre 1s ease-out 1.6s both;
-}
-
-.carte-menu-cadre-anim5 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out  1.8s both;
-          animation: autre 1s ease-out  1.8s both;
-}
-
-.carte-menu-cadre-anim6 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 2s both;
-          animation: autre 1s ease-out 2s both;
-}
-
-.carte-menu-cadre-anim7 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 2.2s both;
-          animation: autre 1s ease-out 2.2s both;
-}
-
-.carte-menu-cadre-anim8 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out  2.4s both;
-          animation: autre 1s ease-out  2.4s both;
-}
-
-.carte-menu-cadre-anim9 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 2.6s both;
-          animation: autre 1s ease-out 2.6s both;
-}
-
-.carte-menu-cadre-anim1 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 1 both0.2s;
-          animation: autre 1s ease-out 1 both0.2s;
-}
-
-.carte-menu-cadre-anim2 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 2 both0.2s;
-          animation: autre 1s ease-out 2 both0.2s;
-}
-
-.carte-menu-cadre-anim3 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 3 both0.2s;
-          animation: autre 1s ease-out 3 both0.2s;
-}
-
-.carte-menu-cadre-anim4 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 4 both0.2s;
-          animation: autre 1s ease-out 4 both0.2s;
-}
-
-.carte-menu-cadre-anim5 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 5 both0.2s;
-          animation: autre 1s ease-out 5 both0.2s;
-}
-
-.carte-menu-cadre-anim6 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 6 both0.2s;
-          animation: autre 1s ease-out 6 both0.2s;
-}
-
-.carte-menu-cadre-anim7 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 7 both0.2s;
-          animation: autre 1s ease-out 7 both0.2s;
-}
-
-.carte-menu-cadre-anim8 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 8 both0.2s;
-          animation: autre 1s ease-out 8 both0.2s;
-}
-
-.carte-menu-cadre-anim9 {
-  opacity: 0;
-  -webkit-animation: autre 1s ease-out 9 both0.2s;
-          animation: autre 1s ease-out 9 both0.2s;
-}
-
 @-webkit-keyframes autre {
   from {
     -webkit-transform: translateY(-30%);
@@ -986,6 +878,60 @@ body, html {
             transform: translateY(0%);
     opacity: 1;
   }
+}
+
+.carte-menu-cadre-anim1 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 1s both;
+          animation: autre 1s ease-out 1s both;
+}
+
+.carte-menu-cadre-anim2 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 1.2s both;
+          animation: autre 1s ease-out 1.2s both;
+}
+
+.carte-menu-cadre-anim3 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 1.4s both;
+          animation: autre 1s ease-out 1.4s both;
+}
+
+.carte-menu-cadre-anim4 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 1.6s both;
+          animation: autre 1s ease-out 1.6s both;
+}
+
+.carte-menu-cadre-anim5 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 1.8s both;
+          animation: autre 1s ease-out 1.8s both;
+}
+
+.carte-menu-cadre-anim6 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 2s both;
+          animation: autre 1s ease-out 2s both;
+}
+
+.carte-menu-cadre-anim7 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 2.2s both;
+          animation: autre 1s ease-out 2.2s both;
+}
+
+.carte-menu-cadre-anim8 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 2.4s both;
+          animation: autre 1s ease-out 2.4s both;
+}
+
+.carte-menu-cadre-anim9 {
+  opacity: 0;
+  -webkit-animation: autre 1s ease-out 2.6s both;
+          animation: autre 1s ease-out 2.6s both;
 }
 
 @media screen and (min-width: 560px) {
