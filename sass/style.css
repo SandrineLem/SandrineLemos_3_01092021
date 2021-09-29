@@ -663,10 +663,12 @@ body, html {
 }
 
 .carte-menu-cadre-descri {
-  width: 350px;
-  line-height: 20px;
-  font-size: 0.9em;
+  width: 300px;
+  line-height: 13px;
+  margin-top: 8px;
+  font-size: 1em;
   font-weight: lighter;
+  padding-bottom: 30px;
 }
 
 .carte-menu-cadre-price {
@@ -812,7 +814,7 @@ body, html {
             transform: scaleX(1);
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
-    width: 350px;
+    width: 300px;
   }
   100% {
     -webkit-transform: scaleX(0.99);
@@ -820,10 +822,10 @@ body, html {
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
     width: 180px;
-    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom: 0;
   }
 }
 
@@ -833,7 +835,7 @@ body, html {
             transform: scaleX(1);
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
-    width: 350px;
+    width: 300px;
   }
   100% {
     -webkit-transform: scaleX(0.99);
@@ -841,14 +843,27 @@ body, html {
     -webkit-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
     width: 180px;
-    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom: 0;
   }
 }
 
 .carte-menu-cadre:hover .carte-menu-cadre-descri {
+  -webkit-animation: basverslagauche both 500ms;
+          animation: basverslagauche both 500ms;
+}
+.carte-menu-cadre-tilte {
+  width: 280px;
+  line-height: 20px;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.carte-menu-cadre:hover .carte-menu-cadre-tilte {
   -webkit-animation: basverslagauche both 500ms;
           animation: basverslagauche both 500ms;
 }
