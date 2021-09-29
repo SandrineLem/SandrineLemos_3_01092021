@@ -552,10 +552,12 @@ body,html{
     
 }
 .carte-menu-cadre-descri{
-    width: 350px;
-    line-height: 20px;
-    font-size: 0.9em;
+    width: 300px;
+    line-height: 13px;
+    margin-top: 8px;
+    font-size: 1em;
     font-weight: lighter;
+    padding-bottom: 30px;
 }
 
 .carte-menu-cadre-price{
@@ -658,23 +660,33 @@ body,html{
     0% {
       transform: scaleX(1);
       transform-origin: 0% 0%;
-      width: 350px;
+      width: 300px;
     }
     100% {
       transform: scaleX(0.99);
       transform-origin: 0% 0%;
       width: 180px;
-      line-height: 20px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      margin-bottom:0 ;
     } 
   }
   .carte-menu-cadre:hover .carte-menu-cadre-descri{
-      animation:basverslagauche both 500ms;           
+      animation:basverslagauche both 500ms;
+             
     } 
-
-
+ .carte-menu-cadre-tilte{
+     width: 280px;
+     line-height: 20px;
+     white-space: nowrap;
+     margin: 0;
+     margin-top: 8px;
+     margin-bottom: 0;
+    }
+     .carte-menu-cadre:hover .carte-menu-cadre-tilte{
+        animation: basverslagauche both 500ms;
+     }
 // animation defiler des cartes avec systeme de boucle //
 $j:0.8;
 
